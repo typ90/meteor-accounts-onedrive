@@ -5,7 +5,7 @@ OneDrive (Microsoft Account) OAuth2 login service for use with Meteor Auth
 ## Package Dependencies
 
 This login service depends on the bleeding edge changes within the Meteor Auth branch.
-Only Compatable with Meteor > 0.9.2
+Only compatable with Meteor > 0.9.2
 
 * oauth2
 * oauth
