@@ -1,9 +1,12 @@
 Package.describe({
-  summary: "Onedrive OAuth flow",
-  version: "0.3.1"
+  name: "maxkferg:accounts-onedrive",
+  summary: "Onedrive OAuth flow for Meteor Auth",
+  version: "0.3.1",
+  git: "https://github.com/maxkferg/meteor-accounts-onedrive.git"
 });
 
 Package.on_use(function(api) {
+  api.versionsFrom("METEOR@0.9.2")
   api.use('oauth2', ['client', 'server']);
   api.use('oauth', ['client', 'server']);
   api.use('http', ['server']);

@@ -10,7 +10,7 @@
     ],
     [
       "base64",
-      "1.0.0"
+      "1.0.0-rc0"
     ],
     [
       "binary-heap",
@@ -18,14 +18,10 @@
     ],
     [
       "blaze",
-      "2.0.0"
-    ],
-    [
-      "blaze-tools",
       "1.0.0"
     ],
     [
-      "boilerplate-generator",
+      "blaze-tools",
       "1.0.0"
     ],
     [
@@ -38,19 +34,19 @@
     ],
     [
       "ddp",
-      "1.0.8"
+      "1.0.8-rc0"
     ],
     [
       "deps",
-      "1.0.3"
+      "1.0.0"
     ],
     [
       "ejson",
-      "1.0.2"
+      "1.0.0"
     ],
     [
       "follower-livedata",
-      "1.0.1"
+      "1.0.1-rc0"
     ],
     [
       "geojson-utils",
@@ -62,7 +58,7 @@
     ],
     [
       "htmljs",
-      "1.0.1"
+      "1.0.0-cordova1"
     ],
     [
       "http",
@@ -86,7 +82,7 @@
     ],
     [
       "logging",
-      "1.0.3"
+      "1.0.0"
     ],
     [
       "meteor",
@@ -94,15 +90,15 @@
     ],
     [
       "minifiers",
-      "1.1.0"
+      "1.0.0"
     ],
     [
       "minimongo",
-      "1.0.3"
+      "1.0.0"
     ],
     [
       "mongo",
-      "1.0.5"
+      "1.0.4-rc1"
     ],
     [
       "oauth",
@@ -114,7 +110,7 @@
     ],
     [
       "observe-sequence",
-      "1.0.2"
+      "1.0.0"
     ],
     [
       "ordered-dict",
@@ -123,10 +119,6 @@
     [
       "random",
       "1.0.0"
-    ],
-    [
-      "reactive-var",
-      "1.0.1"
     ],
     [
       "reload",
@@ -138,7 +130,7 @@
     ],
     [
       "routepolicy",
-      "1.0.1"
+      "1.0.0-cordova1"
     ],
     [
       "service-configuration",
@@ -146,11 +138,11 @@
     ],
     [
       "spacebars",
-      "1.0.1"
+      "1.0.1-rc0"
     ],
     [
       "spacebars-compiler",
-      "1.0.2"
+      "1.0.0"
     ],
     [
       "templating",
@@ -158,11 +150,7 @@
     ],
     [
       "tracker",
-      "1.0.2"
-    ],
-    [
-      "ui",
-      "1.0.2"
+      "1.0.2-rc0"
     ],
     [
       "underscore",
@@ -170,18 +158,14 @@
     ],
     [
       "url",
-      "1.0.0"
+      "1.0.0-ekate"
     ],
     [
       "webapp",
-      "1.1.1"
-    ],
-    [
-      "webapp-hashing",
-      "1.0.0"
+      "1.0.3-rc0"
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.30",
+  "toolVersion": "meteor-tool@1.0.31",
   "format": "1.0"
 }
