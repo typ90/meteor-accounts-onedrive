@@ -32,7 +32,6 @@ OneDrive.requestCredential = function (options, credentialRequestCompleteCallbac
     '&response_type=code' +
     '&redirect_uri=' + OAuth._redirectUri('onedrive', config) +
     '&state=' + OAuth._stateParam(loginStyle, credentialToken);
-  console.log(loginUrl)
   OAuth.launchLogin({
     loginService: "onedrive",
     loginStyle: loginStyle,

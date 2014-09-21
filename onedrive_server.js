@@ -45,7 +45,6 @@ var getAccessToken = function (query) {
     throw _.extend(new Error("Failed to complete OAuth handshake with OneDrive. " + err.message),
                    {response: err.response});
   }
-  console.log(response)
   if (response.data.error) { // if the http response was a json object with an error attribute
     throw new Error("Failed to complete OAuth handshake with OneDrive. " + response.data.error);
   } else {
