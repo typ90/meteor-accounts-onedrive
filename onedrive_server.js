@@ -2,7 +2,7 @@ OneDrive = {};
 
 OAuth.registerService('onedrive', 2, null, function(query) {
   var tokens = getTokens(query);
-  var accessToken = tokens.accessToken;
+  var accessToken = tokens.access_token;
   var identity = getIdentity(accessToken);
   var expiresAt = (new Date).getTime()/1000 + tokens.expires_in; 
 
