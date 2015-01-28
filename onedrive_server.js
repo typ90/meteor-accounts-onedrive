@@ -1,18 +1,17 @@
 OneDrive = {};
 
 OAuth.registerService('onedrive', 2, null, function(query) {
-  var accessToken = getAccessToken(query);
+  var tokens = getTokens(tokens);
+  var accessToken = tokens.accessToken;
   var identity = getIdentity(accessToken);
-  var timeNow = (new Date).getTime()/1000; 
-  console.log()
+  var expiresAt = (new Date).getTime()/1000 + tokens.expires_in; 
 
   return {
     serviceData: {
       id: identity.id,
       accessToken: OAuth.sealSecret(accessToken),
-      email: identity.email,
+      email: identity.emails.preferred,
       username: identity.login,
-      expiresAt: timeNow+identity.expires_in
     },
     options: {profile: {name: identity.name}}
   };
@@ -22,7 +21,7 @@ var userAgent = "Meteor";
 if (Meteor.release)
   userAgent += "/" + Meteor.release;
 
-var getAccessToken = function (query) {
+var getTokens = function (query) {
   var config = ServiceConfiguration.configurations.findOne({service: 'onedrive'});
   if (!config)
     throw new ServiceConfiguration.ConfigError();
@@ -51,7 +50,7 @@ var getAccessToken = function (query) {
   if (response.data.error) { // if the http response was a json object with an error attribute
     throw new Error("Failed to complete OAuth handshake with OneDrive. " + response.data.error);
   } else {
-    return response.data.access_token;
+    return response.data;
   }
 };
 
