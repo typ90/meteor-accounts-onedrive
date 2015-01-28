@@ -1,7 +1,7 @@
 Package.describe({
   name: "maxkferg:accounts-onedrive",
   summary: "OneDrive OAuth flow",
-  version: "0.4.3",
+  version: "0.4.4",
   git: "https://github.com/maxkferg/meteor-accounts-onedrive.git"
 });
 
