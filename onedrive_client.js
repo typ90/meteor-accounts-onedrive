@@ -20,7 +20,7 @@ OneDrive.requestCredential = function (options, credentialRequestCompleteCallbac
   }
   var credentialToken = Random.secret();
 
-  var scope = (options && options.requestPermissions) || ["wl.basic"];
+  var scope = (options && options.requestPermissions) || ["wl.basic","wl.skydrive","wl.emails"];
   var flatScope = _.map(scope, encodeURIComponent).join('+');
 
   var loginStyle = OAuth._loginStyle('onedrive', config, options);

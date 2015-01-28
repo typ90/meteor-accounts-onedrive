@@ -12,7 +12,7 @@ OAuth.registerService('onedrive', 2, null, function(query) {
       accessToken: OAuth.sealSecret(accessToken),
       email: identity.email,
       username: identity.login,
-      expiresAt: timeNow+identity.expiresAt
+      expiresAt: timeNow+identity.expires_in
     },
     options: {profile: {name: identity.name}}
   };
