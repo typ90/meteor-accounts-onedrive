@@ -3,13 +3,16 @@ OneDrive = {};
 OAuth.registerService('onedrive', 2, null, function(query) {
   var accessToken = getAccessToken(query);
   var identity = getIdentity(accessToken);
+  var timeNow = (new Date).getTime()/1000; 
+  console.log()
 
   return {
     serviceData: {
       id: identity.id,
       accessToken: OAuth.sealSecret(accessToken),
       email: identity.email,
-      username: identity.login
+      username: identity.login,
+      expiresAt: timeNow+identity.expiresAt
     },
     options: {profile: {name: identity.name}}
   };
