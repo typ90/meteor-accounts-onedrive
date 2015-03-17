@@ -20,7 +20,7 @@ OneDrive.requestCredential = function (options, credentialRequestCompleteCallbac
   }
   var credentialToken = Random.secret();
 
-  var scope = (options && options.requestPermissions) || ["wl.basic","wl.skydrive","wl.emails"];
+  var scope = (options && options.requestPermissions) || ["wl.basic","wl.skydrive","wl.emails","wl.offline_access"];
   var flatScope = _.map(scope, encodeURIComponent).join('+');
 
   var loginStyle = OAuth._loginStyle('onedrive', config, options);
@@ -30,7 +30,7 @@ OneDrive.requestCredential = function (options, credentialRequestCompleteCallbac
     '?client_id=' + config.clientId +
     '&scope=' + flatScope +
     '&response_type=code' +
-    '&redirect_uri=' + OAuth._redirectUri('onedrive', config) +
+    '&redirect_uri=' + encodeURI(OAuth._redirectUri('onedrive', config)) +
     '&state=' + OAuth._stateParam(loginStyle, credentialToken);
   OAuth.launchLogin({
     loginService: "onedrive",
