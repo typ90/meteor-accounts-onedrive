@@ -16,7 +16,7 @@ Package.on_use(function(api) {
   api.use('accounts-base', ['client', 'server']);
   api.use('service-configuration', ['client', 'server']);
 
-  api.export('Onedrive');
+  api.export('OneDrive');
 
 
   api.add_files(['onedrive_configure.html', 'onedrive_configure.js'],'client');
